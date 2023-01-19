@@ -47,11 +47,11 @@ img {
 .next2 {
   cursor: pointer;
   position: absolute;
-  top: 45%;
+  top: 50%;
   width: auto;
   padding: 16px;
   margin-top: -50px;
-  color: rgb(255, 255, 255);
+  color: rgb(100, 161, 157);
   font-weight: bold;
   font-size: 40px;
   border-radius: 0 3px 3px 0;
@@ -67,7 +67,7 @@ img {
 /* Position the "next button" to the right */
 .next2 {
     right: 0px;
-    border-radius: 3px 0 0 3px;
+    border-radius: 10px 0 0 3px;
   }
 
 /* On hover, add a black background color with a little bit see-through */
