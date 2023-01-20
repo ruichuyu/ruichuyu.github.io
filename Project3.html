@@ -19,6 +19,7 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/slidshows.css" rel="stylesheet" />
+    <link href="css/cCompare.css" rel="stylesheet" />
     <!-- links in site-->
     <link href="index.html">
 </head>
@@ -100,22 +101,22 @@
     <div class="slidecontainer col-xl-5 col-lg-7">
         <div class="mySlides">
             <div class="numbertext">1 / 4</div>
-            <img src="images/Project3/Project3_4.jpeg" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-            <div class="numbertext">2 / 4</div>
             <img src="images/Project3/Project3_3.jpeg" style="width:100%">
         </div>
 
         <div class="mySlides">
-            <div class="numbertext">3 / 4</div>
+            <div class="numbertext">2 / 4</div>
             <img src="images/Project3/Project3_2.png" style="width:100%">
         </div>
-
+        
+        <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <img src="images/Project3/Project3_6.png" style="width:100%">
+        </div>
+        
         <div class="mySlides">
             <div class="numbertext">4 / 4</div>
-            <img src="images/Project3/Project3_6.png" style="width:100%">
+            <img src="images/Project3/Project3_1.png" style="width:100%">
         </div>
 
 
@@ -128,12 +129,33 @@
 
 
     </div>
-            </div>
 
-        </div>
+    </section>
+   <!-- image bar-->
+   <section >
+
+    <div class=" c-compare imageBar align-items-center" style="--value:50%;">
+        <img class="c-compare__left barImg" src="images/Project3/Project3_4.png" alt="Color">
+        <img class="c-compare__right barImg" src="images/Project3/Project3_4_2.png" alt="B/W">
+        <input type="range" class="c-rng c-compare__range" min="0" max="100" value="50" oninput="this.parentNode.style.setProperty('--value', `${this.value}%`)" />
+   </section>
+
+    <!-- Projects dicribtion-->
+    <section class="projects-section bg-light" id="projects">
+        <div class="container px-4 px-lg-5">
+            <!-- Featured Project Row-->
+            <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                <div class="col-xl-12 col-lg-5">
+                    <div class="featured-text text-center text-lg-left">
+                        <h4>过程描述</h4>
+                        <p class="text-black-50 mb-0">草图展示gallary</p>
+                    </div>
+
+                </div>
+
+    </div>
     </section>
 
-   
     <!-- Footer-->
     <footer class="footer bg-black small text-center text-white-50">
         <div class="container px-4 px-lg-5">Copyright &copy; Ruichu Yu 2023</div>
@@ -149,6 +171,17 @@
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+ <!-- image bar-->
+    <script>
+		const slider = document.querySelector(".slider input");
+		const img = document.querySelector(".images .img-2");
+		const dragLine = document.querySelector(".slider .drag-line");
+		slider.oninput = () => {
+			let sliderVal = slider.value;
+			dragLine.style.left = sliderVal + "%";
+			img.style.width = sliderVal + "%";
+		}
+	</script>
 </body>
 
 </html>
